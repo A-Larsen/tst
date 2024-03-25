@@ -1,5 +1,6 @@
-= Tst
 image::tst-icon.png[tst]
+
+= Tst
 This is a collection of bash, vim, and gdb scripts that help you easily write,
 compile, and debug lines of code without having to create new files and
 directories. For compiled code, it adds debuging symbols. Everything is
