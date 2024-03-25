@@ -30,11 +30,9 @@ be a good place to check if your program does not run.
 [%header, rows=1,1]
 |===
 | Command    | action
-| `<leader>rt` | runs the program
-| `<leader>rg` | runs gdb
+| `<leader>rt` | runs the program in split terminal
+| `<leader>rg` | runs gdb in split terminal
 |===
-
-These command will open up a terminal to show the output of the command
 
 If you do not like these command mappings you can change them in the
 _/usr/local/share/tst/commands.vim_ file.
