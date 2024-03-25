@@ -1,0 +1,16 @@
+= TST
+
+This is a collection of bash scripts that help you easily test lines of code
+without having to create new files and directories. For compiled code, it allows
+you to step into the code with gdb by adding debuging symbols.
+
+== Installation
+
+To install for the current user do
+
+----
+sudo make install USER=$USER
+----
+
+Otherwise you can change `$USER` to whatever user you want to use the scrips as
+
