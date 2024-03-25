@@ -45,6 +45,11 @@ language and then and then the _default_ file. This file will be the default
 template when you run tst. Otherwise you can look for or make a specific
 template in this directory.
 
+== GDB
+You can specifiy a specific gdb configuration for you language by changing
+_/usr/local/share/tst/gdb/<language>.gdb_. Where language is the language you
+wish to add a configuration for.
+
 == Supported languages
 - c
 - javascript

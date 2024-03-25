@@ -8,7 +8,7 @@ clear
 
 for file in ${type[@]}; do
     case $file in
-        *.nasm) gdb -x ${tstdir}/asm_next.gdb tst;;
-        *.c) gdb tst;;
+        *.nasm) gdb -x ${tstdir}/gdb/nasm.gdb tst;;
+        *.c) gdb -x ${tstdir}/gdb/c.gdb;;
     esac
 done
