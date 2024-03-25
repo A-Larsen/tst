@@ -18,7 +18,7 @@ This command will open up vim into the default template for you language
 
 [source ,sh]
 ----
-$ tst <language> <template>
+$ tst <language exention> <template>
 ----
 
 if no template is specified then the default template will be used
