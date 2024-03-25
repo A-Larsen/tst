@@ -7,7 +7,7 @@ clear
 
 for file in ${type[@]}; do
     case $file in
-        *.cpp)  gcc -g -Wall -Wextra tst.cpp -o tst -lm -lbsd
+        *.cpp)  g++ -g -Wall -Wextra tst.cpp -o tst -lm -lbsd
                 ./tst
         ;;
         *.s|S)  gcc -fno-asynchronous-unwind-tables -g -c -Wall -Wextra tst.s

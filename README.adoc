@@ -66,4 +66,5 @@ all languages then edit the _/usr/local/share/tst/gdb/global.gdb_ file.
 == Dependencies
 - nasm
 - gcc
+- g++
 - Interpreter for your language
