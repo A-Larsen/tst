@@ -9,24 +9,28 @@ for file in ${type[@]}; do
     case $file in
         *.cpp)  g++ -g -Wall -Wextra tst.cpp -o tst -lm -lbsd
                 ./tst
+                break
         ;;
+
         *.s|S)  gcc -fno-asynchronous-unwind-tables -g -c -Wall -Wextra tst.s
                 gcc -o tst tst.o && ./tst
+                break
         ;;
 
         *.c)    gcc -g -Wall -Wextra tst.c -o tst -lm -lbsd
                 ./tst
+                break
         ;;
-        *.js)   ./tst.js;;
-        *.py)   ./tst.py;;
-        *.pl)   LANG=C ./tst.pl;;
+
+        *.pl)   LANG=C ./tst.pl; break;;
+
         *.nasm) nasm -f elf64 -g -F dwarf tst.nasm
                 gcc -o tst tst.o -no-pie && ./tst
+                break
         ;;
-        *.sh)   ./tst.sh;;
-        *.lua)  ./tst.lua;;
-        *.bash) bash tst.bash;;
-        *.sh) sh tst.sh;;
-        *.sed) sed -f tst.sed file;;
+        *.sed)  sed -f tst.sed file; break;;
+        *)
+            ./tst.*
+        ;;
     esac
 done
