@@ -13,13 +13,19 @@ open(){
     rm -R *
 
     cat ${templatePath}/"$2" > tst."$1"
+
+    if [[ "$1" == "sed" ]]; then
+        echo "sed"
+        cp ${templatePath}/file .
+    fi
+
     chmod +x tst."$1"
 }
 
 if (( $# > 0 )); then
     while (( $# != 0 )); do
         case $1 in
-                py|c|cpp|js|sh|pl|s|vim|lua|nasm|bash)
+                py|c|cpp|js|sh|pl|s|vim|lua|nasm|bash|sed)
                 break
             ;;
             *)
@@ -39,4 +45,8 @@ else
     open $1 "default"
 fi
 
-nvim -S "${tstdir}/mappings.vim" tst."$1" 
+if [[ "$1" == "sed" ]]; then
+    nvim -S "${tstdir}/mappings.vim" -o tst."$1" file
+else
+    nvim -S "${tstdir}/mappings.vim" tst."$1" 
+fi

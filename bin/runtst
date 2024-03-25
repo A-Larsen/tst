@@ -27,5 +27,6 @@ for file in ${type[@]}; do
         *.lua)  ./tst.lua;;
         *.bash) bash tst.bash;;
         *.sh) sh tst.sh;;
+        *.sed) sed -f tst.sed file;;
     esac
 done
