@@ -1,0 +1,39 @@
+.TH tst "1" "March 2024" "tst 1.0" "User Commands"
+.SH NAME
+tst \- scripts for testing languages that integrates with vim
+.SH SYNOPSIS
+.B tst
+.B language
+.IR [tempalte]
+.SH DESCRIPTION
+This is a collection of bash scripts that help you easily test lines of code
+without having to create new files and directories. For compiled code, it allows
+you to step into the code with gdb by adding debuging symbols. It easily
+integrates with vim.
+
+If no template is specified then the default template will be used
+
+.SH Vim Commands
+.RS
+.TS
+allbox;
+lb lb
+c l.
+command	Action
+\fI<leader>rt\fP	runs the program in splite terminal
+\fI<leader>rg\fP	runs gdb in split terminal
+.TE
+.RE
+
+If you do not like these command mappings you can change them in the
+_/usr/local/share/tst/commands.vim file.
+
+.SH Templates
+Templates are located in /usr/local/share/tst/templates/. Just look for your
+language and then and then the default file. This file will be the default
+template when you run tst. Otherwise you can look for or make a specific
+template in this directory.
+
+.SH AUTHOR
+.AU
+Written by Austin Michael Larsen

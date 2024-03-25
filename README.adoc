@@ -27,8 +27,8 @@ if no template is specified then the default template will be used
 [%header, rows=1,1]
 |===
 | Command    | action
-| `<leader>rt` | to run the program
-| `<leader>rg` | run gdb
+| `<leader>rt` | runs the program
+| `<leader>rg` | runs gdb
 |===
 
 These command will open up a terminal to show the output of the command
@@ -41,4 +41,6 @@ Templates are located in _/usr/local/share/tst/templates/_. Just look for your
 language and then and then the _default_ file. This file will be the default
 template when you run tst. Otherwise you can look for or make a specific
 template in this directory.
+
+== Supported languages
 
