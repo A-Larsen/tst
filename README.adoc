@@ -11,16 +11,18 @@ To install for the current user do
 sudo make install USER=$USER
 ----
 
-Otherwise you can change `$USER` to whatever user you want to use the scrips as
+Otherwise you can change `$USER` to whatever user you want to use the scripts as
 
 === running
 This command will open up vim into the default template for you language
 
+[source ,sh]
 ----
 $ tst <language>
 ----
 
 === Vim commands
+[%header, cols=1,1]
 |===
 | Command    | action
 | `<leader>rt` | to run the program
@@ -31,7 +33,6 @@ These command will open up a terminal to show the output of the command
 
 If you do not like these command mappings you can change them in the
 _/usr/local/share/tst/vim/tst.vim_ file.
-
 
 === Templates
 Templates are located in _/usr/local/share/tst/templates/_. Just look for your
