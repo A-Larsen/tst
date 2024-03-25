@@ -39,4 +39,4 @@ else
     open $1 "default"
 fi
 
-nvim -S "${tstdir}/commands.vim" tst."$1" 
+nvim -S "${tstdir}/mappings.vim" tst."$1" 

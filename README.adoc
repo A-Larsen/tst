@@ -29,7 +29,7 @@ if no template is specified then the default template will be used
 You can edit /usr/local/bin/runtst to modify how your program runs. This might
 be a good place to check if your program is not running correctly.
 
-=== Vim commands
+=== Vim mappings
 [%header, rows=1,1]
 |===
 | Command    | action
@@ -38,7 +38,7 @@ be a good place to check if your program is not running correctly.
 |===
 
 If you do not like these command mappings you can change them in the
-_/usr/local/share/tst/commands.vim_ file.
+_/usr/local/share/tst/mappings.vim_ file.
 
 === Templates
 Templates are located in _/usr/local/share/tst/templates/_. Just look for your
