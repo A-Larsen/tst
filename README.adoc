@@ -43,4 +43,14 @@ template when you run tst. Otherwise you can look for or make a specific
 template in this directory.
 
 == Supported languages
+- c
+- javascript
+- lua
+- nasm
+- perl
+- python
 
+== Dependencies
+- nasm
+- gcc
+- Interpreter for you're language
