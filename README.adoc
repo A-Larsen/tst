@@ -1,7 +1,7 @@
 == Tst
 image::tst.png[tst]
 This is a collection of bash, vim, and gdb scripts that help you easily write,
-compile, and test lines of code without having to create new files and
+compile, and debug lines of code without having to create new files and
 directories. For compiled code, it adds debuging symbols. Everything is
 integrated with neovim. This is **NOT** for testing code in compiled languages
 that have multiple non-standard libraries. This is just for testing simple short
