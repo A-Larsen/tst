@@ -13,7 +13,8 @@ for file in ${type[@]}; do
         ;;
 
         *.s|S)  gcc -fno-asynchronous-unwind-tables -g -c -Wall -Wextra tst.s
-                gcc -o tst tst.o && ./tst
+                gcc -o tst tst.o
+                ./tst
                 break
         ;;
 
@@ -25,7 +26,8 @@ for file in ${type[@]}; do
         *.pl)   LANG=C ./tst.pl; break;;
 
         *.nasm) nasm -f elf64 -g -F dwarf tst.nasm
-                gcc -o tst tst.o -no-pie && ./tst
+                gcc -o tst tst.o -no-pie
+                ./tst
                 break
         ;;
 
