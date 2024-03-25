@@ -27,7 +27,7 @@ $ tst <language exention> <template>
 if no template is specified then the default template will be used
 
 You can edit /usr/local/bin/runtst to modify how your program runs. This might
-be a good place to check if your program does not run.
+be a good place to check if your program is not running correctly.
 
 === Vim commands
 [%header, rows=1,1]
