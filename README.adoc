@@ -48,7 +48,8 @@ template in this directory.
 == GDB
 You can specifiy a specific gdb configuration for you language by changing
 _/usr/local/share/tst/gdb/<language>.gdb_. Where language is the language you
-wish to add a configuration for.
+wish to add a configuration for. If you want to change the gdb configuration for
+all languages then edit the _/usr/local/share/tst/gdb/global.gdb_ file.
 
 == Supported languages
 - c
