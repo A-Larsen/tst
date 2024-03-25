@@ -13,5 +13,6 @@ install:
 	cp ./man/tst.1 /usr/share/man/man1/
 
 uninstall:
-	rm -rf $(SHARE)/tst
+	rm -rf $(SHARE)/tst /usr/share/man/man1/tst.1
 	for file in $(BINFILES); do rm -rf $(BIN)/$$file; done
+
