@@ -18,8 +18,10 @@ This command will open up vim into the default template for you language
 
 [source ,sh]
 ----
-$ tst <language>
+$ tst <language> <template>
 ----
+
+if no template is specified then the default template will be used
 
 === Vim commands
 [%header, rows=1,1]
@@ -32,10 +34,11 @@ $ tst <language>
 These command will open up a terminal to show the output of the command
 
 If you do not like these command mappings you can change them in the
-_/usr/local/share/tst/vim/tst.vim_ file.
+_/usr/local/share/tst/commands.vim file.
 
 === Templates
 Templates are located in _/usr/local/share/tst/templates/_. Just look for your
-language and then and then the _basic_ file. This file will be the default
-template when you run tst
+language and then and then the _default_ file. This file will be the default
+template when you run tst. Otherwise you can look for or make a specific
+template in this directory.
 

@@ -45,14 +45,6 @@ open(){
     cd $1
     rm -R *
 
-    case $1 in 
-        js)
-            if [[ $2 == "basic_express" ]]; then
-                npm install --save express
-            fi
-        ;;
-    esac
-
     cat ${templatePath}/"$2" > tst."$1"
     chmod +x tst."$1"
 }
@@ -63,9 +55,8 @@ if (( $# > 0 )); then
             -h)
                 helpOption | less
                 exit
-                # shift
             ;;
-            py|c|cpp|js|sh|pl|kts|java|s|vim|lua|nasm)
+                py|c|cpp|js|sh|pl|kts|java|s|vim|lua|nasm)
                 break
             ;;
             *)
@@ -79,5 +70,10 @@ else
     exit 2
 fi
 
-open $1 "basic"
-nvim -S "${tstdir}/vim/tst.vim" tst."$1" 
+if (( $# > 1 )); then
+    open $1 "$2"
+else
+    open $1 "default"
+fi
+
+nvim -S "${tstdir}/commands.vim" tst."$1" 
