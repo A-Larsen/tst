@@ -15,13 +15,13 @@ To install for the current user do
 sudo make install USER=$USER
 ----
 
+Otherwise you can change `$USER` to whatever user you want to use the scripts as
+
 == Uninstall
 
 ----
 sudo make uninstall
 ----
-
-Otherwise you can change `$USER` to whatever user you want to use the scripts as
 
 == Running
 This command will open up neovim into the default template for you language
