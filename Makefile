@@ -9,5 +9,5 @@ install:
 	chmod 755 $(BIN)/tst
 	chmod 755 $(BIN)/runtst
 	chmod 755 $(BIN)/rungdb
-	chown $(USER) -R $(SHARE)/tst
+	chown -R $(USER) $(SHARE)/tst
 	cp ./man/tst.1 /usr/share/man/man1/
