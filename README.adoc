@@ -2,10 +2,10 @@
 image::tst.png[tst]
 This is a collection of bash, vim, and gdb scripts that help you easily write,
 compile, and test lines of code without having to create new files and
-directories. For compiled code, it allows you to step into the code with gdb by
-adding debuging symbols. Everything is integrated with neovim. This is **NOT**
-for testing code in compiled languages that have multiple non-standard
-libraries. This is just for testing simple short lines of code.
+directories. For compiled code, it adds debuging symbols. Everything is
+integrated with neovim. This is **NOT** for testing code in compiled languages
+that have multiple non-standard libraries. This is just for testing simple short
+lines of code.
 
 === Installation
 To install for the current user do
