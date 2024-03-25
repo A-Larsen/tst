@@ -1,11 +1,10 @@
-= TST
-
+= Tst
 This is a collection of bash scripts that help you easily test lines of code
 without having to create new files and directories. For compiled code, it allows
-you to step into the code with gdb by adding debuging symbols.
+you to step into the code with gdb by adding debuging symbols. It easily
+integrates with vim.
 
 == Installation
-
 To install for the current user do
 
 ----
@@ -13,4 +12,29 @@ sudo make install USER=$USER
 ----
 
 Otherwise you can change `$USER` to whatever user you want to use the scrips as
+
+== running
+This command will open up vim into the default template for you language
+
+----
+$ tst <language>
+----
+
+== Vim commands
+|===
+| Command    | action
+| `<leader>rt` | to run the program
+| `<leader>rg` | run gdb
+|===
+
+These command will open up a terminal to show the output of the command
+
+If you do not like these command mappings you can change them in the
+_/usr/local/share/tst/vim/tst.vim_ file.
+
+
+== Templates
+Templates are located in _/usr/local/share/tst/templates/_. Just look for your
+language and then and then the _basic_ file. This file will be the default
+template when you run tst
 

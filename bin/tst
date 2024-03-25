@@ -85,47 +85,5 @@ else
     exit 2
 fi
 
-#get exit statuses and handle errors/exceptions
-declare -A exceptions
-
-open_argument2=${2}
-
-[[ -f "${templatePath}/$2" ]]; exceptions["template-does-not-exist"]=$?
-
-[[ ! -z "$2" ]]; exceptions["no-template-argument"]=$?
-
-
-# for throw in ${!exceptions[@]}; do
-#     if [[ ${exceptions[$throw]} == "1" ]]; then
-
-#         case $throw in
-#             template-does-not-exist)
-#                 printf "\
-# template does not exist\n\
-# using basic template instead\n"
-#                 read null
-#                 # open $1 basic
-#                 open_argument2="basic"
-#                 break
-#             ;;
-#             no-template-argument)
-#                 # : #apperantly the same as pass in python
-#                 # open $1 basic
-#                 open_argument2="basic"
-#                 break
-#             ;;
-#             *)
-#                 echo "an error has occured"
-#                 exit 3
-#             ;;
-#         esac
-#     fi
-# done
-
-
-# open $1 ${open_argument2}
 open $1 "basic"
-# vim --remote-tab tst."$1" 
-# nvim tst."$1" 
-# ~/appimages/nvim.appimage tst."$1" 
 nvim -S "${tstdir}/vim/tst.vim" tst."$1" 
