@@ -1,7 +1,7 @@
 == Tst
 This is a collection of bash scripts that help you easily test lines of code
 without having to create new files and directories. For compiled code, it allows
-you to step into the code with gdb by adding debuging symbols. It easily
+you to step into the code with gdb by adding debuging symbols. It also
 integrates with vim.
 
 === Installation
