@@ -4,39 +4,6 @@ tstdir=/usr/local/share/tst/
 cd $tstdir
 templatePath=${tstdir}templates/"$1"/
 
-
-helpOption(){
-cat <<_HELP
-NAME
-       tst - a command line tool to open vim to a template for testing ideas
-
-SYNOPSIS
-       tst {language} [template]
-       tst -h
-
-COMMANDS
-       language      language species the programing language you want 
-                     to write your test in. It is chosen by extension 
-                     name
-
-                     Example: $ tst js
-                     this will open a test for a javascript program
-
-       template      tells tst what template you want to use. located in
-                     /home/\$USER/Development/tst/\$LANGUAGE\template.
-                     if no template is specified the default template is 
-                     used.
-
-
-OPTIONS
-       -h      displays help  
-
-SEE ALSO
-    tstsave runtst mktst
-    
-_HELP
-}
-
 open(){
 	if [[ ! -d "$1" ]]; then
 		return
@@ -52,10 +19,6 @@ open(){
 if (( $# > 0 )); then
     while (( $# != 0 )); do
         case $1 in
-            -h)
-                helpOption | less
-                exit
-            ;;
                 py|c|cpp|js|sh|pl|kts|java|s|vim|lua|nasm)
                 break
             ;;
