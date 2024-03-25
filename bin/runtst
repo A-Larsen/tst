@@ -28,7 +28,9 @@ for file in ${type[@]}; do
                 gcc -o tst tst.o -no-pie && ./tst
                 break
         ;;
+
         *.sed)  sed -f tst.sed file; break;;
+
         *)
             ./tst.*
         ;;
