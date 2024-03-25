@@ -1,4 +1,4 @@
-== Tst
+= Tst
 image::tst-icon.png[tst]
 This is a collection of bash, vim, and gdb scripts that help you easily write,
 compile, and debug lines of code without having to create new files and
@@ -7,7 +7,7 @@ integrated with neovim. This is **NOT** for testing code in compiled languages
 that have multiple non-standard libraries. This is just for testing simple short
 lines of code.
 
-=== Installation
+== Installation
 To install for the current user do
 
 ----
@@ -22,7 +22,7 @@ sudo make uninstall
 
 Otherwise you can change `$USER` to whatever user you want to use the scripts as
 
-=== Running
+== Running
 This command will open up neovim into the default template for you language
 
 [source ,sh]
@@ -35,7 +35,7 @@ if no template is specified then the default template will be used
 You can edit /usr/local/bin/runtst to modify how your program runs. This might
 be a good place to check if your program is not running correctly.
 
-=== Vim mappings
+== Vim mappings
 [%header, rows=1,1]
 |===
 | Command    | action
@@ -46,7 +46,7 @@ be a good place to check if your program is not running correctly.
 If you do not like these command mappings you can change them in the
 _/usr/local/share/tst/mappings.vim_ file.
 
-=== Templates
+== Templates
 Templates are located in _/usr/local/share/tst/templates/_. Just look for your
 language and then and then the _default_ file. This file will be the default
 template when you run tst. Otherwise you can look for or make a specific
