@@ -1,4 +1,5 @@
 == Tst
+image::tst.png[tst]
 This is a collection of bash/vim/gdb scripts that help you easily test lines of
 code without having to create new files and directories. For compiled code, it
 allows you to step into the code with gdb by adding debuging symbols. Everything
