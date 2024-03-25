@@ -7,7 +7,7 @@ clear
 
 for file in ${type[@]}; do
     case $file in
-        *.cpp)  g++ -g -Wall -Wextra tst.cpp -o tst -lm -lbsd
+        *.cpp)  g++ -g -Wall -Wextra tst.cpp -o tst -lm
                 ./tst
                 break
         ;;
@@ -18,7 +18,7 @@ for file in ${type[@]}; do
                 break
         ;;
 
-        *.c)    gcc -g -Wall -Wextra tst.c -o tst -lm -lbsd
+        *.c)    gcc -g -Wall -Wextra tst.c -o tst -lm
                 ./tst
                 break
         ;;
