@@ -5,21 +5,16 @@ cd "$1"
 type=(*.*)
 clear
 
-if [[ -f "Makefile" ]]; then
-	make 
-	./a.out
-else
-	for file in ${type[@]}; do
-		case $file in
-			*.cpp) g++ tst.cpp -o tst && ./tst;;
-			*.s|S)   gcc -fno-asynchronous-unwind-tables -g -c -Wall -Wextra tst.s && gcc -o tst tst.o && ./tst;;
-			*.c)   gcc -g -Wall -Wextra tst.c -o tst -lm -lbsd && ./tst;;
-			*.js)  ./tst.js;;
-			*.py)  ./tst.py;;
-			*.pl)  LANG=C ./tst.pl;;
-            *.nasm) nasm -f elf64 -g -F dwarf tst.nasm && gcc -o tst tst.o -no-pie && ./tst;;
-			*.sh)  ./tst.sh;;
-            *.lua) ./tst.lua;;
-		esac
-	done
-fi
+for file in ${type[@]}; do
+    case $file in
+        *.cpp) g++ tst.cpp -o tst && ./tst;;
+        *.s|S)   gcc -fno-asynchronous-unwind-tables -g -c -Wall -Wextra tst.s && gcc -o tst tst.o && ./tst;;
+        *.c)   gcc -g -Wall -Wextra tst.c -o tst -lm -lbsd && ./tst;;
+        *.js)  ./tst.js;;
+        *.py)  ./tst.py;;
+        *.pl)  LANG=C ./tst.pl;;
+        *.nasm) nasm -f elf64 -g -F dwarf tst.nasm && gcc -o tst tst.o -no-pie && ./tst;;
+        *.sh)  ./tst.sh;;
+        *.lua) ./tst.lua;;
+    esac
+done
