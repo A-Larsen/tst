@@ -19,7 +19,7 @@ open(){
 if (( $# > 0 )); then
     while (( $# != 0 )); do
         case $1 in
-                py|c|cpp|js|sh|pl|kts|java|s|vim|lua|nasm)
+                py|c|cpp|js|sh|pl|s|vim|lua|nasm|bash)
                 break
             ;;
             *)
