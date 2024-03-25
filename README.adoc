@@ -60,6 +60,8 @@ all languages then edit the _/usr/local/share/tst/gdb/global.gdb_ file.
 - perl
 - python
 - c++
+- bash
+- sh
 
 == Dependencies
 - nasm
