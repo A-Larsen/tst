@@ -22,7 +22,7 @@ $ tst <language>
 ----
 
 === Vim commands
-[%header, cols=1,1]
+[%header, rows=1,1]
 |===
 | Command    | action
 | `<leader>rt` | to run the program
