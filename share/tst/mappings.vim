@@ -1,6 +1,7 @@
 function! RunTst()
     botright split
     terminal runtst
+    normal i
 endfunction
 
 function! RunGdb()
