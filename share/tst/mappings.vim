@@ -7,6 +7,7 @@ endfunction
 function! RunGdb()
     botright split
     terminal rungdb
+    normal i
 endfunction
 
 nnoremap <silent> <leader>rt :call RunTst()<cr>
